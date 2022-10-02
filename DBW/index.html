@@ -1,0 +1,291 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Differentiable Blocks World</title>
+  <meta name="description" content="Project page for Differentiable Blocks World: Qualitative 3D Decomposition by Rendering Primitives."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <meta charset="utf-8">
+  <link rel="icon" href="./icon.png" type="image/png">
+
+  <!--Facebook-->
+  <meta property="og:image" content="https://www.tmonnier.com/DBW/thumbnail.gif">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="304">
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.tmonnier.com/DBW/"/>
+  <meta property="og:title" content="DBW"/>
+  <meta property="og:description" content="Project page for Differentiable Blocks World: Qualitative 3D Decomposition by Rendering Primitives."/>
+
+  <!--Twitter-->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DBW" />
+  <meta property="twitter:description" content="Project page for Differentiable Blocks World: Qualitative 3D Decomposition by Rendering Primitives."/>
+  <meta name="twitter:image" content="https://www.tmonnier.com/DBW/thumbnail.gif">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,700" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Google Analytics (DO NOT copy following section-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQGR4X733Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RQGR4X733Q');
+  </script>
+  <!-- End Google Analytics -->  
+</head>
+<body>
+
+<div class="container" style="text-align:center; padding-top:1rem">
+  <div class="row" style="text-align:center">
+    <div class="col-xs-12">
+      <h2><nobr>Differentiable Blocks World:</nobr><br> <nobr>Qualitative 3D Decomposition</nobr>
+        <nobr>by Rendering Primitives</nobr></h2>
+      <h3>NeurIPS 2023</h3>
+    </div>
+  </div>
+  <div class="row" style="text-align:center">
+    <div class="col-xs-0 col-md-1"></div>
+    <div class="col-xs-12 col-md-10">
+      <h4>
+        <nobr><a href="https://www.tmonnier.com">Tom Monnier</a><sup>1</sup></nobr>&emsp;&emsp;
+        <nobr><a href="https://github.com/jake-austin">Jake Austin</a><sup>2</sup></nobr> &emsp;&emsp;
+        <nobr><a href="https://people.eecs.berkeley.edu/~kanazawa/">Angjoo Kanazawa</a><sup>2</sup></nobr>&emsp;&emsp;
+        <nobr><a href="https://people.eecs.berkeley.edu/~efros/">Alexei A. Efros</a><sup>2</sup></nobr>&emsp;&emsp;
+        <nobr><a href="http://imagine.enpc.fr/~aubrym/">Mathieu Aubry</a><sup>1</sup></nobr>
+      </h4>
+      <sup>1</sup><nobr>LIGM, Ecole des Ponts</nobr>, <nobr>Univ Gustave Eiffel</nobr>, CNRS&emsp;&emsp;&emsp;&emsp;&emsp;
+      <nobr><sup>2</sup>UC Berkeley</nobr>
+    </div>
+    <div class="col-xs-0 col-md-1"></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+    <h3 style="text-align:center; padding-bottom:1rem">
+      <a class="label label-info" href="https://arxiv.org/abs/2307.05473"><i class="fa fa-file-text"></i>&nbsp;&nbsp;Paper</a>
+      <a class="label label-info" href="https://github.com/monniert/differentiable-blocksworld"><i class="fa fa-code fa-lg" style="vertical-align: top; margin-top: 6px"></i>&nbsp;&nbsp;Code</a>
+      <a class="label label-info" href="./dbw.pptx"><i class="fa fa-area-chart fa-lg" style="vertical-align:top;margin-top:6px"></i>&nbsp;&nbsp;Slides</a>
+      <a class="label label-info" href="./ref.bib"><i class="fa fa-commenting fa-lg" style="vertical-align:top;margin-top:6px"></i>&nbsp;&nbsp;BibTeX</a>
+    </h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10">
+      <a href="./teaser.zip" download>
+      <video autoplay loop muted playsinline style="width:100%" src="teaser.mp4"></video>
+      </a>
+    </div>
+    <div class="hidden-xs col-md-1"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Abstract</h3>
+      <hr/>
+      <p>
+      Given a set of calibrated images of a scene, we present an approach that produces a <b>simple, 
+      compact, and actionable 3D world representation</b> by means of 3D primitives.  While many 
+      approaches focus on recovering high-fidelity 3D scenes, we focus on parsing a scene into 
+      mid-level 3D representations made of a <b>small set of textured primitives</b>. Such 
+      representations are interpretable, easy to manipulate and suited for physics-based 
+      simulations.  Moreover, unlike existing primitive decomposition methods that rely on 3D 
+      data, our approach operates directly on images through differentiable rendering.  
+      Specifically, we model primitives as <b>superquadric meshes</b> and their parameters are <b>optimized from 
+        scratch with an image rendering loss</b>. We highlight the importance of <b>modeling transparency</b>
+      for each primitive, which is critical for optimization and also enables <b>handling varying 
+        numbers of primitives</b>. We show that the resulting textured primitives faithfully 
+      reconstruct the input images, accurately model the visible 3D points, while providing 
+      amodal shape completions of unseen object regions.  We compare our approach to the state of 
+      the art on diverse scenes from DTU, and demonstrate its robustness on real-life captures 
+      from BlendedMVS and Nerfstudio. We also showcase how our results can be used to 
+      effortlessly edit a scene or perform physical simulations.
+      </p>
+    </div>
+  </div>
+
+  <div class="row" style="text-align:center">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10">
+      <img src="overview.jpg" alt="overview.jpg" class="text-center" style="width: 100%;">
+    </div>
+    <div class="hidden-xs col-md-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Results</h3>
+      <hr/>
+    </div>
+  </div>
+
+  <div class="row" style="text-align: center">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10 text-center">
+      <h4 width=100% class="highlight" style="padding:0.5em">
+        <b>A. Rendering & 3D Decomposition
+          <a href="view_synthesis.zip" download><i class="fa fa-download fa-lg"></i></a></b>
+      </h4>
+      <video autoplay loop muted playsinline src="view_synthesis.mp4" style="width:100%"></video>
+    </div>
+    <div class="hidden-xs col-md-1"></div>
+  </div>
+
+  <div class="row" style="text-align: center">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10 text-center">
+      <h4 width=100% class="highlight" style="padding:0.5em">
+        <b>B. Physics-based simulations
+          <a href="simulations.zip" download><i class="fa fa-download fa-lg"></i></a></b>
+      </h4>
+    </div>
+    <div class="hidden-xs col-md-1"></div>
+  </div>
+
+  <div class="row" style="text-align: center">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-6 col-md-5 text-center">
+      Throwing a ball
+      <video autoplay loop muted playsinline src="simulations/stone_ball.mp4" style="width:100%"></video>
+      Pinching to the center
+      <video autoplay loop muted playsinline src="simulations/pinch.mp4" style="width:100%"></video>
+      Simulating a waterfall
+      <video autoplay loop muted playsinline src="simulations/gundam_hose.mp4" style="width:100%"></video>
+    </div>
+    <div class="col-xs-6 col-md-5 text-center">
+      Applying gravity force
+      <video autoplay loop muted playsinline src="simulations/stone_gravity.mp4" style="width:100%"></video>
+      Playing pool with fruits
+      <video autoplay loop muted playsinline src="simulations/poolball.mp4" style="width:100%"></video>
+      Simulating an earthquake
+      <video autoplay loop muted playsinline src="simulations/stone_earthquake.mp4" style="width:100%"></video>
+    </div>
+    <div class="hidden-xs col-md-1"></div>
+  </div>
+
+  <div class="row" style="text-align: center">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10 text-center">
+      <h4 width=100% class="highlight" style="padding:0.5em">
+        <b>C. Scene editing & Amodal synthesis
+          <a href="editing_and_amodal.zip" download><i class="fa fa-download fa-lg"></i></a></b>
+      </h4>
+      Editing - Raw (left), No ears (middle), Move arm (right)<br>
+      <video autoplay loop muted playsinline src="editing.mp4" style="width:100%"></video>
+    </div>
+    <div class="hidden-xs col-md-1"></div>
+  </div>
+
+  <div class="row" style="text-align: center">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10 text-center">
+      Amodal view synthesis - Nerfacto (left), <b>Ours (right)</b><br>
+      <video autoplay loop muted playsinline src="amodal.mp4" style="width:100%"></video>
+    </div>
+    <div class="hidden-xs col-md-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Resources</h3>
+      <hr/>
+    </div>
+  </div>
+
+  <div class="row" style="text-align: center">
+    <div class="col-xs-4 col-lg-4">
+      <h4>Paper</h4>
+      <a href="https://arxiv.org/abs/2307.05473" style="color:inherit">
+        <img src="./paper.png" alt="paper.png" class="text-center" style="max-width:70%; border:0.15em solid;
+        border-radius:0.5em;"></a>
+    </div>
+    <div class="col-xs-4 col-lg-4">
+      <h4>Code</h4>
+      <a href="https://github.com/monniert/differentiable-blocksworld" style="color:inherit;">
+        <img src="./github_repo.png" alt="github_repo.png" class="text-center" style="max-width:70%; border:0.15em solid;
+        border-radius:0.5em;"></a>
+    </div>
+    <div class="col-xs-4 col-lg-4">
+      <h4>Slides</h4>
+      <a href="dbw.pptx" style="color:inherit">
+        <img src="./slides.png" alt="slides.png" class="text-center"
+        style="width:70%; max-width: 250px; border:0.15em solid; border-radius:0.5em"></a>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h4 style="padding-top:0.5em">BibTeX</h4>
+      If you find this work useful, consider citing:
+      <div class="card">
+        <div class="card-block">
+          <pre class="card-text clickselect">
+@inproceedings{monnier2023dbw,
+  title={{Differentiable Blocks World: Qualitative 3D Decomposition by Rendering Primitives}},
+  author={Monnier, Tom and Austin, Jake and Kanazawa, Angjoo and Efros, Alexei A. and Aubry, Mathieu},
+  booktitle={{NeurIPS}},
+  year={2023},
+}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Acknowledgements</h3>
+      <hr/>
+      <p>
+      We thank Cyrus Vachha for help on the physics-based simulations; Antoine Guédon, Romain 
+      Loiseau for visualization insights; Fran&#231;ois Darmon, Romain Loiseau, Elliot Vincent for 
+      manuscript feedback.  This work was supported in part by the European Research Council 
+      (ERC project DISCOVER, number 101076028),
+      ANR project EnHerit ANR-17-CE23-0008, gifts from Adobe and HPC 
+      resources from GENCI-IDRIS (2022-AD011011697R2, 2022-AD011013538).
+      </p>
+
+      <p>
+      If you like this project, see related works from our group:
+      <ul>
+        <li>
+          <a href="https://arxiv.org/abs/2304.09704">Loiseau et al. - 
+            Learnable Earth Parser: Discovering 3D Prototypes in Aerial Scans (arXiv 2023)</a>
+        </li>
+
+        <li>
+          <a href="https://arxiv.org/abs/2204.10310">Monnier et al. - Share With Thy Neighbors:
+            Single-View Reconstruction by Cross-Instance Consistency (ECCV 2022)</a>
+        </li>
+
+        <li>
+          <a href="https://arxiv.org/abs/2112.09648">Darmon et al. - 
+            Improving neural implicit surfaces geometry with patch warping (CVPR 2022)</a>
+        </li>
+
+      </ul>
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<div class="container" style="padding-top:3rem; padding-bottom:3rem">
+  <p style="text-align:center">
+    &#169; You are welcome to copy the code, simply attribute the source with a link
+    to this page and remove analytics.
+  </p>
+</div>
+
+</body>
+</html> 

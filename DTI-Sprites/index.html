@@ -1,0 +1,339 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DTI-Sprites</title>
+  <meta name="description" content="Project page for Unsupervised Layered Image Decomposition into Object
+  Prototypes."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <meta charset="utf-8">
+
+  <!--Facebook-->
+  <meta property="og:image" content="http://imagine.enpc.fr/~monniert/DTI-Sprites/thumbnail.jpg">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="400">
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://imagine.enpc.fr/~monniert/DTI-Sprites/"/>
+  <meta property="og:title" content="DTI Sprites"/>
+  <meta property="og:description" content="Project page for Unsupervised Layered Image Decomposition into Object
+  Prototypes."/>
+
+  <!--Twitter-->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DTI Sprites" />
+  <meta property="twitter:description" content="Project page for Unsupervised Layered Image Decomposition into Object
+  Prototypes."/>
+  <meta name="twitter:image" content="http://imagine.enpc.fr/~monniert/DTI-Sprites/thumbnail.jpg">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Google Analytics (DO NOT copy following section-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQGR4X733Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RQGR4X733Q');
+  </script>
+  <!-- End Google Analytics -->  
+</head>
+<body>
+
+<div class="container" style="text-align:center; padding:2rem 15px">
+  <div class="row" style="text-align:center">
+    <h1>Unsupervised Layered Image Decomposition into Object Prototypes</h1>
+    <h4>ICCV 2021</h4>
+  </div>
+  <div class="row" style="text-align:center">
+    <div class="col-xs-0 col-md-2"></div>
+    <div class="col-xs-12 col-md-8">
+      <h4>
+        <nobr><a href="http://imagine.enpc.fr/~monniert/">Tom Monnier</a><sup>1</sup></nobr>&emsp;
+        <nobr><a href="http://imagine.enpc.fr/~vincente/">Elliot Vincent</a><sup>1,2</sup></nobr> &emsp;
+        <nobr><a href="https://www.di.ens.fr/~ponce/">Jean Ponce</a><sup>2,3</sup></nobr>&emsp;
+        <nobr><a href="http://imagine.enpc.fr/~aubrym/">Mathieu Aubry</a><sup>1</sup></nobr>
+      </h4>
+      <sup>1</sup>LIGM, <nobr>&Eacute;cole des Ponts</nobr>, <nobr>Univ Gustave Eiffel</nobr>, CNRS<br>
+      <nobr><sup>2</sup>Inria and DIENS</nobr> <nobr>(ENS-PSL, CNRS, Inria)</nobr>&emsp;
+      <nobr><sup>3</sup>Center for Data Science</nobr>, <nobr>New York University</nobr>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-1" style="text-align:left; margin-left:0px; margin-right:0px">
+      <a href="https://arxiv.org/abs/2104.14575" style="color:inherit">
+        <i class="fa fa-file-pdf-o fa-4x"></i></a> 
+    </div>
+    <div class="hidden-xs hidden-sm col-md-1" style="text-align:left; margin-left:0px;">
+      <a href="https://github.com/monniert/dti-sprites" style="color:inherit">
+        <i class="fa fa-github fa-4x"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="text-align:center; padding:1rem">
+  <div class="row">
+      <img src="thumbnail.jpg" alt="thumbnail.jpg" class="text-center" style="width: 95%; max-width: 700px">
+  </div>
+  <div class="row">
+  <h3 style="text-align:center; padding-top:1rem">
+    <a class="label label-info" href="https://openaccess.thecvf.com/content/ICCV2021/papers/Monnier_Unsupervised_Layered_Image_Decomposition_Into_Object_Prototypes_ICCV_2021_paper.pdf">Paper</a>
+    <a class="label label-info" href="./dtisprites_supmat.pdf">Supp<a>
+    <a class="label label-info" href="https://github.com/monniert/dti-sprites">Code</a>
+    <a class="label label-info" href="https://www.youtube.com/watch?v=ZalsST1m5tU">Video</a>
+    <a class="label label-info" href="dtisprites.pptx">Slides</a>
+    <a class="label label-info" href="poster.pdf">Poster</a>
+    <a class="label label-info" href="ref.bib">BibTeX</a>
+  </h3>
+  </div>
+</div>
+
+<div class="container">
+  <h3>Abstract</h3>
+  <hr/>
+  <p>
+    We present an <b>unsupervised learning</b> framework for decomposing images into layers
+    of automatically discovered object models. Contrary to recent approaches that model image 
+    layers with autoencoder networks, we represent them as <b>explicit transformations of a small 
+    set of prototypical images</b>. Our model has three main components: (i) a set of object 
+    prototypes in the form of learnable images with a transparency channel, which we refer to 
+    as <i>sprites</i>; (ii) differentiable parametric functions predicting occlusions and 
+    transformation parameters necessary to instantiate the sprites in a given image; (iii) a 
+    layered image formation model with occlusion for compositing these instances into complete 
+    images including background. By <b>jointly learning the sprites and occlusion/transformation 
+    predictors to reconstruct images</b>, our approach not only yields
+    accurate layered image decompositions, but also identifies object categories and instance 
+    parameters. We first validate our approach by providing results on par with the state of 
+    the art on standard multi-object synthetic benchmarks (Tetrominoes, Multi-dSprites, 
+    CLEVR6). We then demonstrate the applicability of our model to real images in tasks that 
+    include clustering (SVHN, GTSRB), cosegmentation (Weizmann Horse) and object discovery from 
+    unfiltered social network images. To the best of our knowledge, this is the first time that 
+    a layered image decomposition algorithm learns an <b>explicit and shared concept of objects</b>,
+    and is robust enough to be applied to real images.
+  </p>
+
+  <h3>Video</h3>
+  <hr/>
+  <div class="row" style="text-align:center">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10 text-center">
+    <div class="embed-responsive embed-responsive-16by9" style="text-align:center">
+      <iframe class="embed-responsive-item text-center" src="https://www.youtube.com/embed/ZalsST1m5tU" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        style="width:100%; clip-path:inset(1px 1px);" allowfullscreen></iframe>
+    </div>
+    <div class="hidden-xs col-md-1"></div>
+    </div>
+  </div>
+
+  <h3>Approach</h3>
+  <hr/>
+  <div class="row" style="text-align: center">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10">
+      <img src="overview.jpg" alt="overview.jpg" class="text-center" style="width: 100%; max-width: 1000px">
+      <p></p>
+      <p>
+      <b>Overview.</b> Given an <span style="color:red">input image</span>
+      <img src="https://latex.codecogs.com/svg.latex?\mathbf{x}" alt="x" border="0"/> (highlighted in red), we predict 
+      for each layer 
+      <img src="https://latex.codecogs.com/svg.latex?\ell" alt="l" border="0"/> the transformations
+      <img src="https://latex.codecogs.com/svg.latex?\mathcal{T}_{\nu_{\ell&space;k}}^{\,\textrm{spr}}"
+      alt="T^{spr}_{\nu_{lk}}" border="0"/> and 
+      <img src="https://latex.codecogs.com/svg.latex?\mathcal{T}_{\eta_{\ell}}^{\,\textrm{lay}}"
+      alt="T^{lay}_{\eta_{l}}" border="0"/> to apply to the set of sprites
+      <img src="https://latex.codecogs.com/svg.latex?\{\mathbf{s}_{1},&space;\ldots,&space;\mathbf{s}_{K}\}"
+      alt="{s_1, ..., s_k}" border="0"/> that best reconstruct the input.  Transformed 
+      sprites and transformed background can be composed through
+      <img src="https://latex.codecogs.com/svg.latex?\mathcal{C}_{\delta}" alt="C_\delta" border="0">
+      into many possible reconstructions given a predicted occlusion matrix
+      <img src="https://latex.codecogs.com/svg.latex?\delta" alt="\delta" border="0">. We introduce a greedy algorithm
+      to select the <span style="color:#00af00">best reconstruction</span> (highlighted in green).
+    </div>
+    <div class="hidden-xs col-md-1"></div>
+  </div>
+
+  <h3>Results</h3>
+  <hr/>
+  <div class="row" style="text-align: center; padding-bottom:1rem;">
+    <div class="col-xs-12">
+    <h4><u>Unsupervised sprite discovery</u></h4>
+    <img src="sprites.jpg" alt="sprites.jpg" class="text-center" style="width: 100%; max-width: 1000px;">
+    </div>
+  </div>
+
+  <div class="row" style="text-align: center;">
+    <h4 style="padding-bottom:1rem"><u>Unsupervised segmentation and decomposition</u></h4>
+    <div class="col-xs-6">
+      <img src="multiseg.jpg" alt="multiseg.jpg" class="text-center" style="width: 100%; max-width: 1000px;">
+    </div>
+
+    <div class="col-xs-6">
+      <img src="coseg_bis.jpg" alt="coseg_bis.jpg" class="text-center" style="width: 89%; max-width: 1000px;">
+    </div>
+  </div>
+
+  <div class="row" style="text-align: center;">
+    <div class="col-xs-6">
+      <p>
+        <b>Multi-object segmentations.</b> From left to right, we show inputs, 
+        reconstructions, semantic segmentation, instance 
+        segmentation, and first decomposition layers.
+        <span style="background-color:#ffffd0;">We urge the visitors
+        to click <a href="extra_results/index.html">HERE</a> for other random decompositions.</span>
+      </p>
+    </div>
+    <div class="col-xs-6">
+      <p><b>Weizamnn Horse database co-segmentation.</b> We show result examples giving for each 
+      <span style="color:#0066cc">input</span>, its reconstruction, the layered decomposition (background, foreground,
+      mask) as well as the <span style="color:#00af00">extracted foreground</span>.
+      </p>
+    </div>
+  </div>
+
+  <div class="row" style="text-align: center;">
+    <h4><u>Object-centric image manipulations</u></h4>
+    <div class="hidden-xs col-sm-2"></div>
+    <div class="col-xs-5 col-sm-3">
+      <h5 style="padding-top:15%; margin-bottom:0.5em">Input</h5>
+      <img src="img_manip/example.png" alt="example.png" class="text-center" style="width: 53%; max-width: 1000px;
+      border:0.3em solid #0066cc;">
+      <h5 style="padding-top:10%; margin-bottom:0.5em">Scale</h5>
+      <video style="width: 53%; border:0.2em solid #000" autoplay muted playsinline loop>
+        <source src="img_manip/object_scale.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="col-xs-7 col-sm-5">
+      <h5 style="margin-top:0em; margin-bottom:0.5em">Object swapping</h5>
+      <video style="width: 30%; max-width:170px; border:0.2em solid #000" autoplay muted playsinline loop>
+        <source src="img_manip/object_swap0.mp4" type="video/mp4" />
+      </video>
+      <video style="width: 30%; max-width:170px; border:0.2em solid #000" autoplay muted playsinline loop>
+        <source src="img_manip/object_swap1.mp4" type="video/mp4" />
+      </video>
+      <video style="width: 30%; max-width:170px; border:0.2em solid #000" autoplay muted playsinline loop>
+        <source src="img_manip/object_swap2.mp4" type="video/mp4" />
+      </video>
+      <br>
+
+      <h5 style="margin-top:0em; margin-bottom:0.5em">Position</h5>
+      <video style="width: 30%; max-width:170px; border:0.2em solid #000" autoplay muted playsinline loop>
+        <source src="img_manip/object_pos0.mp4" type="video/mp4" />
+      </video>
+      <video style="width: 30%; max-width:170px; border:0.2em solid #000" autoplay muted playsinline loop>
+        <source src="img_manip/object_pos1.mp4" type="video/mp4" />
+      </video>
+      <video style="width: 30%; max-width:170px; border:0.2em solid #000" autoplay muted playsinline loop>
+        <source src="img_manip/object_pos2.mp4" type="video/mp4" />
+      </video>
+      <br>
+
+      <h5 style="margin-top:0em; margin-bottom:0.5em">Color</h5>
+      <video style="width: 30%; max-width:170px; border:0.2em solid #000" autoplay muted playsinline loop>
+        <source src="img_manip/object_col0.mp4" type="video/mp4" />
+      </video>
+      <video style="width: 30%; max-width:170px; border:0.2em solid #000" autoplay muted playsinline loop>
+        <source src="img_manip/object_col1.mp4" type="video/mp4" />
+      </video>
+      <video style="width: 30%; max-width:170px; border:0.2em solid #000" autoplay muted playsinline loop>
+        <source src="img_manip/object_col2.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="hidden-xs col-sm-2"></div>
+  </div>
+    
+  <div class="row" style="text-align: center;">
+    <div class="hidden-xs col-sm-2"></div>
+    <div class="col-xs-12 col-sm-8">
+      <p>
+      <b>Image manipulation.</b> Given an <span style="color:#0066cc;">input image</span> from CLEVR6 
+      (top left), we show several image manipulations. On the bottom left, we modify the scale, and 
+      from top to bottom on the right, we use different sprites, vary their positions and change their colors.
+      </p>
+    </div>
+    <div class="hidden-xs col-sm-2"></div>
+  </div>
+
+  <h3>Resources</h3>
+  <hr/>
+  <div class="row" style="text-align: center">
+    <div class="col-xs-4 col-lg-4">
+      <h4>Paper</h4>
+      <a href="https://arxiv.org/abs/2104.14575" style="color:inherit">
+        <img src="paper.png" alt="paper.png" class="text-center" style="max-width:70%; border:0.15em solid;
+        border-radius:0.5em;"></a>
+    </div>
+    <div class="col-xs-4 col-lg-4">
+      <h4>Code</h4>
+      <a href="https://github.com/monniert/dti-sprites" style="color:inherit;">
+        <img src="github_repo.png" alt="github_repo.png" class="text-center" style="max-width:70%; border:0.15em solid;
+        border-radius:0.5em;"></a>
+    </div>
+    <div class="col-xs-4 col-lg-4">
+      <h4>Slides</h4>
+      <a href="dtisprites.pptx" style="color:inherit">
+        <img src="slides.png" alt="slides.png" class="text-center"
+        style="width:70%; max-width: 250px; border:0.15em solid; border-radius:0.5em"></a>
+    </div>
+  </div>
+  <h4 style="padding-top:0.5em">BibTeX</h4>
+  If you find this work useful for your research, please cite:
+  <div class="card">
+    <div class="card-block">
+      <pre class="card-text clickselect">
+@inproceedings{monnier2021dtisprites,
+title={{Unsupervised Layered Image Decomposition into Object Prototypes}},
+author={Monnier, Tom and Vincent, Elliot and Ponce, Jean and Aubry, Mathieu},
+booktitle={ICCV},
+year={2021},
+}</pre>
+    </div>
+  </div>
+
+  <h3>Further information</h3>
+  <hr/>
+  If you like this project, check out related works on deep transformations from our group:
+  <ul>
+    <li>
+      <a href="https://arxiv.org/abs/2006.11132">Monnier et al. - Deep Transformation Invariant Clustering (NeurIPS 
+        2020)</a>
+    </li>
+    <li>
+      <a href="https://arxiv.org/abs/1908.04725">Deprelle et al. - Learning elementary structures for 3D shape
+        generation and matching (NeurIPS 2019)</a>
+    </li>
+    <li>
+      <a href="https://arxiv.org/abs/1806.05228">Groueix et al. - 3D-CODED: 3D Correspondences by Deep Deformation (ECCV
+        2018)</a>
+    </li>
+    <li>
+      <a href="https://arxiv.org/abs/1802.05384">Groueix et al. - AtlasNet: A Papier-Mache Approach to Learning 3D
+        Surface Generation (CVPR 2018)</a>
+    </li>
+  </ul>
+
+  <h3>Acknowledgements</h3>
+  <hr/>
+  <p>
+    We thank Fran&#231;ois Darmon, Hugo Germain and David Picard for valuable feedback.
+    This work was supported in part by: the French government under management of Agence Nationale de la Recherche
+    as part of the <a href="https://enherit.enpc.fr/">project EnHerit</a> ANR-17-CE23-0008 and the 
+    "Investissements d'avenir" program, reference ANR-19-P3IA-0001 (PRAIRIE 3IA Institute); project Rapid Tabasco; gifts
+    from Adobe; the Louis Vuitton/ENS Chair in Artificial Intelligence; the Inria/NYU collaboration; and HPC resources 
+    from GENCI-IDRIS (Grant 2020-AD011011697). 
+  </p>
+</div>
+
+<div class="container" style="padding-top:3rem; padding-bottom:3rem">
+  <p style="text-align:center">
+    &#169; You are welcome to copy this website's code for your personal use, please attribute the source with a link
+    back to this page and remove the analytics code in the header. Possible misspellings: tom monier, tom monnie,
+    tom monie, monniert.
+  </p>
+</div>
+
+</body>
+</html> 

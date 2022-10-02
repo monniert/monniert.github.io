@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tom Monnier</title>
+  <meta name="description" content="Personal webpage of Tom Monnier">
+  <meta charset="utf-8">
+  <link rel="icon" href="./resrc/icon.svg" type="image/svg">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Roboto:400,700" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- Google Analytics (DO NOT copy/paste following section, setup your own analytics tag 
+    at https://analytics.google.com/analytics/web/) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQGR4X733Q"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-RQGR4X733Q");
+  </script>
+  <!-- End of Google Analytics -->
+
+</head>
+<body>
+  
+<div class="container" style="text-align:center; padding-top:2rem;">
+  <div class="row" style="text-align:left; margin-top:1rem; display: flex; align-items: center; flex-wrap: wrap;">
+    <div class="hidden-xs hidden-sm col-md-3">
+      <img src="./resrc/tom_monnier_vert.jpg" alt="tom_monnier.jpg" style="width:100%; border:2px solid black;">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9">
+      <h2 style="margin-top:0rem; margin-bottom:1rem">Tom Monnier</h2>
+      <h3 style="margin-top:0rem; margin-bottom:2rem;">Research Scientist at <a href="https://ai.meta.com">Meta</a>
+      </h3>
+
+      <p>
+      I am a Research Scientist at <a href="https://ai.meta.com">Meta</a> working on computer vision and 3D modeling.
+      I did my PhD in the amazing <a href="https://imagine.enpc.fr">Imagine</a> lab 
+      at <a href="https://www.ecoledesponts.fr/en">ENPC</a> under the guidance of Mathieu Aubry.
+      During my PhD, I was fortunate to work with Jean Ponce (<a href="https://www.di.ens.fr/willow/">Inria</a>), Matthew Fisher 
+      (<a href="https://research.adobe.com/">Adobe Research</a>), Alyosha Efros and Angjoo Kanazawa 
+      (<a href="https://bair.berkeley.edu/">UC Berkeley</a>). Before that, I completed my engineer's degree (=M.Sc.) at
+      <a href="http://www.mines-paristech.eu/">Mines Paris</a>.
+      </p>
+
+      <p>
+      My research mainly focuses on learning things from images without annotations, through self-supervised and unsupervised methods
+      <em class="highlight">(see representative papers)</em>. I am always looking for PhD interns, feel free to reach out!
+      </p>
+
+      <h4 style="margin-top:1rem; margin-bottom:0rem; padding-bottom:0rem;">
+      <a href="./email.html">email.</i></a>&emsp;
+      <a href="https://github.com/monniert" target="_blank">github.</i></a>&emsp;
+      <a href="https://scholar.google.com/citations?user=ZfV1DqMAAAAJ&hl=en" target="_blank">google scholar.</a>&emsp;
+      <a href="https://twitter.com/t_monnier" target="_blank">twitter.</i></a>
+      </h4>
+
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2>News</h2>
+  <div class="limit-items">
+    <input type="checkbox" id="show-all">
+    <label for="show-all" class="text-show"><h6 style="margin:0em">Show more</h6></label>
+    <label for="show-all" class="text-hide"><h6 style="margin:0em">Hide</h6></label>
+    <div class="items">
+      <ul>
+        <li>
+          <b class="item">10 / 2023</b>&emsp;
+          Our multi-view approach to 3D decomposition called <a href="https://tmonnier.com/DBW/">Differentiable Blocks World</a>
+          has been accepted at <a href="https://nips.cc/Conferences/2023">NeurIPS 2023</a>!
+        </li>        
+        <li>
+          <b class="item">09 / 2023</b>&emsp;
+          I am joining Meta in the Paris office as a research scientist
+        </li>        
+        <li>
+          <b class="item">07 / 2023</b>&emsp;
+          We release <a href="https://tmonnier.com/DBW/">Differentiable Blocks World</a> on arXiv, where 3D scenes are
+          reconstructed by fitting textured primitives in multiple views
+        </li>        
+        <li>
+          <b class="item">03 / 2023</b>&emsp;
+          Our work <a href="https://imagine.enpc.fr/~guedona/MACARONS/">MACARONS</a> on simultaneous path planning and
+          3D reconstruction has been accepted to <a href="https://cvpr2023.thecvf.com/">CVPR 2023</a>!
+        </li>
+        <li>
+          <b class="item">02 / 2023</b>&emsp; <a href="https://arxiv.org/abs/2302.01660">The Learnable Typewriter</a> - a document-analysis
+          system learned with no or weak supervision - is published on arXiv
+        </li>
+        <li>
+          <b class="item">12 / 2022</b>&emsp;
+          Our analytical paper on <a href="https://arxiv.org/abs/2212.10292">unsupervised visual reasoning</a> has been accepted at
+          <a href="https://sslneurips22.github.io/">NeurIPS 2022 SSL Workshop</a>!
+        </li>
+        <li>
+          <b class="item">07 / 2022</b>&emsp;
+          The single-view reconstruction method <a href="./UNICORN/">UNICORN</a> &#129412;
+          has been accepted to <a href="https://eccv2022.ecva.net/">ECCV 2022</a>!
+        </li>
+        <li>
+          <b class="item">06 / 2022</b>&emsp;
+          Visiting <a href="https://www.berkeley.edu/">University of California</a> and presenting my PhD work at 
+          <a href="https://bair.berkeley.edu/">Berkeley AI Research</a>
+        </li>
+        <li>
+          <b class="item">10 / 2021</b>&emsp;
+          Our work on <a href="https://romainloiseau.github.io/deep-linear-shapes/">representing 3D shapes</a>
+          has been accepted at <a href="https://3dv2021.surrey.ac.uk/">3DV 2021</a>!
+        </li>
+        <li>
+          <b class="item">07 / 2021</b>&emsp;
+          Our <a href="./DTI-Sprites/">sprite-based image decomposition
+            approach</a> has been accepted to <a href="http://iccv2021.thecvf.com/home">ICCV 2021</a>!
+        </li>
+        <li>
+          <b class="item">05 / 2021</b>&emsp;
+          Starting a remote internship in the Creative Intelligence Lab at <a href="https://research.adobe.com/">Adobe
+            Research</a> advised by <a href="https://techmatt.github.io">Matthew Fisher</a>
+        </li>
+        <li>
+          <b class="item">12 / 2020</b>&emsp;
+          Presenting <a href="./DTIClustering/">DTI Clustering</a> at a workshop for
+          <a href="http://parismlgroup.org/">ParisMLGroup</a>
+        </li>
+        <li>
+          <b class="item">11 / 2020</b>&emsp;
+          Presenting <a href="./docExtractor/">docExtractor</a> at a 
+          <a href="https://www.meshs.fr/page/dhnord2020">DHNord 2020</a> workshop
+        </li>
+        <li>
+          <b class="item">10 / 2020</b>&emsp;
+          Our work on <a href="./DTIClustering/">DTI Clustering</a> 
+          is accepted at <a href="https://nips.cc/Conferences/2020">NeurIPS 2020</a> as an oral presentation!
+        </li>
+        <li>
+          <b class="item">06 / 2020</b>&emsp;
+          Our system <a href="./docExtractor/docExtractor.pdf">docExtractor</a> is accepted at <a href="http://icfhr2020.tu-dortmund.de/">ICFHR
+          2020</a> as an oral!
+        </li>
+        <li>
+          <b class="item">02 / 2020</b>&emsp;
+          Starting PhD in the <a href="https://imagine.enpc.fr">Imagine</a> research group at 
+          <a href="https://www.ecoledesponts.fr/en">ENPC</a> under the supervision of
+          <a href="https://imagine.enpc.fr/~aubrym/">Mathieu Aubry</a>
+        </li>
+        <li>
+          <b class="item">01 / 2020</b>&emsp;
+          Our web application for watermark recognition is online, check out the
+          <a href="https://hal.inria.fr/hal-02513038/document">paper</a> and test the app
+          <a href="https://filigranes.inria.fr/#/filigrane-search">here</a>!
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Publications</h2>
+
+  <div class="row highlight" style="text-align:left; margin-bottom:0.5rem; margin-top:0.5rem;">
+    <div class="hidden-xs col-sm-5 vcenter" style="text-align:center;">
+      <a href="./DBW/" target="_blank">
+          <video autoplay muted loop playsinline style="margin:auto;padding:0px;display:block;width:100%;max-width:425px;">
+            <source src="./resrc/dbw.mp4" type="video/mp4">
+            <img src="./resrc/dbw.jpg" width=95% title="Your browser does not support videos.">
+          </video>
+      </a>
+    </div><!--
+
+    --><div class="col-xs-12 col-sm-7 vcenter" style="margin-top:1rem">
+      <b>Differentiable Blocks World: Qualitative 3D Decomposition by Rendering Primitives</b><br>
+      <u>Tom Monnier</u>,
+      <a href="https://github.com/jake-austin">Jake Austin</a>,
+      <a href="http://people.eecs.berkeley.edu/~kanazawa/">Angjoo Kanazawa</a>,
+      <a href="http://people.eecs.berkeley.edu/~efros/">Alexei A. Efros</a>,
+      <a href="https://imagine.enpc.fr/~aubrym">Mathieu Aubry</a><br>
+      <span>NeurIPS 2023</span><br>
+      <a href="https://arxiv.org/abs/2307.05473">paper</a> | <a
+         href="./DBW/">webpage</a> | <a
+         href="https://github.com/monniert/differentiable-blocksworld">code</a> | <a
+         href="./DBW/dbw.pptx">slides</a> | <a
+         href="./DBW/ref.bib">bibtex</a>
+      <p></p>
+      <p>
+      We compute a primitive-based 3D reconstruction from multiple views by optimizing 
+      textured superquadric meshes with learnable transparency.
+      </p>
+    </div>
+  </div>
+
+  <div class="row" style="text-align:left; margin-bottom:0.5rem; margin-top:0.5rem;">
+    <div class="hidden-xs col-xs-5 vcenter" style="text-align:center;">
+      <a href="https://imagine.enpc.fr/~guedona/MACARONS/" target="_blank">
+        <img src="./resrc/macarons.png" alt="macarons.png" style="width:100%;max-width:425px">
+      </a>
+    </div><!--
+
+    --><div class="col-xs-12 col-sm-7 vcenter" style="margin-top:1rem">
+      <b>MACARONS: Mapping And Coverage Anticipation with RGB Online Self-supervision </b><br>
+      <a href="https://imagine.enpc.fr/~guedona/">Antoine Gu&eacute;don</a>,
+      <u>Tom Monnier</u>,
+      <a href="https://imagine.enpc.fr/~monasse/">Pascal Monasse</a>,
+      <a href="https://vincentlepetit.github.io/">Vincent Lepetit</a><br>
+      <span>CVPR 2023</span><br>
+      <a href="https://arxiv.org/abs/2303.03315">paper</a> | <a
+         href="https://imagine.enpc.fr/~guedona/MACARONS/">webpage</a> | <a
+         href="https://github.com/Anttwo/MACARONS">code</a> | <a
+         href="https://youtu.be/NlUNFJYuBGs">video</a> | <a
+         href="https://imagine.enpc.fr/~guedona/MACARONS/macarons.pptx">slides</a> | <a
+         href="./bibtex/macarons.bib">bibtex</a>
+      <p></p>
+      <p>
+      We introduce MACARONS, a method that learns in a self-supervised fashion to explore new environments and 
+      reconstruct them in 3D using RGB images only.
+      </p>
+    </div>
+  </div>
+
+  <div class="row" style="text-align:left; margin-bottom:0.5rem; margin-top:0.5rem;">
+    <div class="hidden-xs col-xs-5 vcenter" style="text-align:center;">
+      <a href="http://imagine.enpc.fr/~siglidii/learnable-typewriter/" target="_blank">
+        <img src="./resrc/learnable_typewriter.jpg" alt="learnable_typewriter.jpg" style="width:100%;max-width:340px">
+      </a>
+    </div><!--
+
+    --><div class="col-xs-12 col-sm-7 vcenter" style="margin-top:1rem">
+      <b>The Learnable Typewriter: A Generative Approach to Text Line Analysis</b><br>
+      <a href="https://imagine.enpc.fr/~siglidii/">Ioannis Siglidis</a>,
+      <a href="https://perso.telecom-paristech.fr/gonthier/">Nicolas Gonthier</a>,
+      <a href="https://juliengaubil.github.io/">Julien Gaubil</a>,
+      <u>Tom Monnier</u>,
+      <a href="https://imagine.enpc.fr/~aubrym">Mathieu Aubry</a><br>
+      <span>arXiv 2023</span><br>
+      <a href="https://arxiv.org/abs/2302.01660">paper</a> | <a
+         href="http://imagine.enpc.fr/~siglidii/learnable-typewriter/">webpage</a> | <a
+         href="https://github.com/ysig/learnable-typewriter">code</a> | <a
+         href="./bibtex/ltw.bib">bibtex</a>
+      <p></p>
+      <p>
+      We build upon sprite-based image decomposition approaches to design a generative method for
+      character analysis and recognition in text lines.
+      </p>
+    </div>
+  </div>
+
+  <div class="row" style="text-align:left; margin-bottom:0.5rem; margin-top:0.5rem;">
+    <div class="hidden-xs col-xs-5 vcenter" style="text-align:center;">
+      <a href="https://arxiv.org/abs/2212.10292" target="_blank">
+        <img src="./resrc/unsup_reasoning.png" alt="unsup_reasoning.png" style="width:100%;max-width:370px">
+      </a>
+    </div><!--
+
+    --><div class="col-xs-12 col-sm-7 vcenter" style="margin-top:1rem">
+      <b>Towards Unsupervised Visual Reasoning: Do Off-The-Shelf Features Know How to Reason?</b><br>
+      <a href="https://wysoczanska.github.io/">Monika Wysoczanska</a>,
+      <u>Tom Monnier</u>,
+      <a href="http://staff.ii.pw.edu.pl/~ttrzcins/">Tomasz Trzcinski</a>,
+      <a href="https://davidpicard.github.io/">David Picard</a><br>
+      <span>NeurIPS Workshops 2022</span><br>
+      <a href="https://arxiv.org/abs/2212.10292">paper</a> | <a
+         href="./bibtex/unsup_reasoning.bib">bibtex</a>
+      <p></p>
+      <p>
+      A Transformer-based framework to evaluate off-the-shelf features (object-centric and dense representations)
+      for the reasoning task of VQA.
+      </p>
+    </div>
+  </div>
+
+  <div class="row highlight" style="text-align:left; margin-bottom:0.5rem; margin-top:0.5rem;">
+    <div class="hidden-xs col-sm-5 vcenter" style="text-align:center;">
+      <a href="./UNICORN/" target="_blank">
+          <video autoplay muted loop playsinline style="margin:auto;padding:0px;display:block;width:100%;max-width:300px;">
+            <source src="./resrc/unicorn.mp4" type="video/mp4">
+            <img src="./resrc/unicorn.png" width=90% title="Your browser does not support videos.">
+          </video>
+      </a>
+    </div><!--
+
+    --><div class="col-xs-12 col-sm-7 vcenter" style="margin-top:1rem">
+      <b>Share With Thy Neighbors: Single-View Reconstruction by Cross-Instance Consistency</b><br>
+      <u>Tom Monnier</u>,
+      <a href="https://techmatt.github.io">Matthew Fisher</a>,
+      <a href="http://people.eecs.berkeley.edu/~efros/">Alexei A. Efros</a>,
+      <a href="https://imagine.enpc.fr/~aubrym">Mathieu Aubry</a><br>
+      <span>ECCV 2022</span><br>
+      <a href="https://arxiv.org/abs/2204.10310">paper</a> | <a
+         href="./UNICORN/">webpage</a> | <a
+         href="https://github.com/monniert/unicorn">code</a> | <a
+         href="https://youtu.be/26N3CeVvZDs">video</a> | <a
+         href="./UNICORN/unicorn.pptx">slides</a> | <a
+         href="./UNICORN/ref.bib">bibtex</a>
+      <p></p>
+      <p>
+      We present UNICORN, a self-supervised approach leveraging the consistency across
+      different single-view images for high-quality 3D reconstructions.
+      </p>
+    </div>
+  </div>
+
+  <div class="row" style="text-align:left; margin-bottom:0.5rem; margin-top:0.5rem;">
+    <!--onmouseout="dti3d_stop()" onmouseover="dti3d_show()">-->
+    <div class="hidden-xs col-sm-5 vcenter" style="text-align:center;">
+      <a href="https://romainloiseau.github.io/deep-linear-shapes/" target="_blank">
+        <img src="./resrc/dti-3d.jpg" alt="dti-3d.jpg" style="width:100%;max-width:350px">
+      </a>
+      <!--
+      <div class="one">
+        <div class="two" id="dti3d_two" style="margin-top:0.3rem">
+          <a href="https://romainloiseau.github.io/deep-linear-shapes/" target="_blank">
+            <img src="./resrc/dti-3d_1.gif" alt="dti-3d_1.gif" style="width:20%;">
+            <img src="./resrc/dti-3d_2.gif" alt="dti-3d_2.gif" style="width:20%;">
+            <img src="./resrc/dti-3d_3.gif" alt="dti-3d_3.gif" style="width:20%;"><br>
+            <img src="./resrc/dti-3d_4.gif" alt="dti-3d_4.gif" style="width:20%;">
+            <img src="./resrc/dti-3d_5.gif" alt="dti-3d_5.gif" style="width:20%;">
+            <img src="./resrc/dti-3d_6.gif" alt="dti-3d_6.gif" style="width:20%;">
+          </a>
+        </div>
+        <a href="https://romainloiseau.github.io/deep-linear-shapes/" target="_blank">
+          <img id="dti3d_one" src="./resrc/dti-3d.jpg" alt="dti-3d.jpg" style="width:81%">
+        </a>
+      </div>
+      <script type="text/javascript">
+        function dti3d_show() {
+          document.getElementById("dti3d_one").style.opacity = "0";
+          document.getElementById("dti3d_two").style.opacity = "1";
+        }
+        function dti3d_stop() {
+          document.getElementById("dti3d_one").style.opacity = "1";
+          document.getElementById("dti3d_two").style.opacity = "0";
+        }
+        dti3d_stop()
+      </script>
+      -->
+    </div><!--
+
+    --><div class="col-xs-12 col-sm-7 vcenter" style="margin-top:1rem">
+      <b>Representing Shape Collections with Alignment-Aware Linear Models </b><br>
+      <a href="https://romainloiseau.github.io/romainloiseau/">Romain Loiseau</a>,
+      <u>Tom Monnier</u>,
+      <a href="https://imagine.enpc.fr/~aubrym">Mathieu Aubry</a>,
+      <a href="https://loiclandrieu.com/">Lo&iuml;c Landrieu</a><br>
+      <span>3DV 2021</span><br>
+      <a href="https://arxiv.org/abs/2109.01605">paper</a> | <a
+         href="https://romainloiseau.github.io/deep-linear-shapes/">webpage</a> | <a
+         href="https://github.com/romainloiseau/deep-linear-shapes">code</a> | <a
+         href="./bibtex/dti-3d.bib">bibtex</a>
+      <p></p>
+      <p>
+        We characterize 3D shapes as affine transformations of linear families learned without supervision, and showcase
+        its advantages on large shape collections.
+      </p>
+    </div>
+  </div>
+
+  <div class="row highlight" style="text-align:left; margin-bottom:0.5rem; margin-top:0.5rem;">
+    <!--onmouseout="sprites_stop()" onmouseenter="sprites_start()" onmouseover="sprites_show()">-->
+    <div class="hidden-xs col-sm-5 vcenter" style="text-align:center;">
+      <a href="./DTI-Sprites/" target="_blank">
+        <img src="./resrc/sprites.png" alt="sprites1.png" style="width:100%;max-width:400px">
+      </a>
+      <!--
+      <div class="one">
+        <div class="two" id="sprites_two" style="padding:0px;margin:0px">
+          <a href="./DTI-Sprites/" target="_blank">
+            <video id="sprites_video" width=88% autoplay muted loop playsinline
+              style="margin:auto;padding-top:0rem;display:block;padding-left:5rem">
+              <source src="./resrc/sprites.mp4" type="video/mp4">
+              <img src="./resrc/sprites2.png" width=90% title="Your browser does not support videos.">
+            </video>
+          </a>
+        </div>
+        <a href="./DTI-Sprites/" target="_blank">
+          <img id="sprites_one" src="./resrc/sprites.png" alt="sprites1.png" style="width:90%;">
+        </a>
+      </div>
+      <script type="text/javascript">
+        function sprites_start() {
+          document.getElementById("sprites_one").style.opacity = "0";
+          document.getElementById("sprites_two").style.opacity = "1";
+          document.getElementById("sprites_video").currentTime = 0;
+          document.getElementById("sprites_video").play();
+        }
+        function sprites_show() {
+          document.getElementById("sprites_one").style.opacity = "0";
+          document.getElementById("sprites_two").style.opacity = "1";
+        }
+        function sprites_stop() {
+          document.getElementById("sprites_one").style.opacity = "1";
+          document.getElementById("sprites_two").style.opacity = "0";
+        }
+        sprites_stop()
+      </script>
+      -->
+    </div><!--
+
+    --><div class="col-xs-12 col-sm-7 vcenter" style="margin-top:1rem">
+      <b>Unsupervised Layered Image Decomposition into Object Prototypes</b><br>
+      <u>Tom Monnier</u>, <a href="https://imagine.enpc.fr/~vincente">Elliot Vincent</a>,
+      <a href="https://www.di.ens.fr/~ponce/">Jean Ponce</a>,
+      <a href="https://imagine.enpc.fr/~aubrym">Mathieu Aubry</a><br>
+      <span>ICCV 2021</span><br>
+      <a href="https://arxiv.org/abs/2104.14575">paper</a> | <a
+         href="./DTI-Sprites/">webpage</a> | <a
+         href="https://github.com/monniert/dti-sprites">code</a> | <a
+         href="https://www.youtube.com/watch?v=ZalsST1m5tU">video</a> | <a
+         href="./DTI-Sprites/dtisprites.pptx">slides</a> | <a
+         href="./DTI-Sprites/ref.bib">bibtex</a>
+      <p></p>
+      <p>
+        We discover the objects recurrent in unlabeled image collections 
+        by modeling images as a composition of learnable sprites.
+      </p>
+    </div>
+  </div>
+
+  <div class="row highlight" style="text-align:left; margin-bottom:0.5rem; margin-top:0.5rem;">
+    <!--onmouseout="dtic_stop()" onmouseenter="dtic_start()" onmouseover="dtic_show()">-->
+    <div class="hidden-xs col-sm-5 vcenter" style="text-align:center;">
+      <a href="./DTIClustering/" target="_blank">
+        <img src="./resrc/dtic2.png" alt="dtic.png" style="width:100%">
+      </a>
+      <!--
+      <div class="one">
+        <div class="two" id="dtic_two">
+          <a href="./DTIClustering/" target="_blank">
+            <video id="dtic_video" width=100% autoplay muted loop playsinline
+              style="margin:auto;padding-top:2rem;display:block;"><source src="./resrc/dtic.mp4" type="video/mp4">
+              <img src="./resrc/dtic.png" width=90% title="Your browser does not support videos.">
+            </video>
+          </a>
+        </div>
+        <a href="./DTIClustering/" target="_blank">
+          <img id="dtic_one" src="./resrc/dtic2.png" alt="dtic.png" style="width:100%;">
+        </a>
+      </div>
+      <script type="text/javascript">
+        function dtic_start() {
+          document.getElementById("dtic_one").style.opacity = "0";
+          document.getElementById("dtic_two").style.opacity = "1";
+          document.getElementById("dtic_video").currentTime = 0;
+          document.getElementById("dtic_video").play();
+        }
+        function dtic_show() {
+          document.getElementById("dtic_one").style.opacity = "0";
+          document.getElementById("dtic_two").style.opacity = "1";
+        }
+        function dtic_stop() {
+          document.getElementById("dtic_one").style.opacity = "1";
+          document.getElementById("dtic_two").style.opacity = "0";
+        }
+        dtic_stop()
+      </script>
+      -->
+    </div><!--
+
+    --><div class="col-xs-12 col-sm-7 vcenter" style="margin-top:1rem">
+      <b>Deep Transformation-Invariant Clustering</b><br>
+      <u>Tom Monnier</u>, <a href="https://imagine.enpc.fr/~groueixt">Thibault Groueix</a>,
+      <a href="https://imagine.enpc.fr/~aubrym">Mathieu Aubry</a><br>
+      <span>NeurIPS 2020 (oral presentation)</span><br>
+      <a href="https://arxiv.org/abs/2006.11132">paper</a> | <a
+         href="./DTIClustering/">webpage</a> | <a
+         href="https://github.com/monniert/dti-clustering">code</a> | <a
+         href="https://www.youtube.com/watch?v=j20MBc1hWGQ">video</a> | <a
+         href="./DTIClustering/dtic_long.pptx">slides</a> | <a
+         href="./DTIClustering/ref.bib">bibtex</a>
+      <p></p>
+      <p>
+        A simple adaptation of K-means to make it work on pixels! We align prototypes to 
+        each sample image before computing cluster distances.
+      </p>
+    </div>
+  </div>
+
+  <div class="row" style="text-align:left; margin-bottom:0.5rem; margin-top:0.5rem;">
+    <div class="hidden-xs col-sm-5 vcenter" style="text-align:center;">
+      <a href="./docExtractor/" target="_blank">
+        <img src="./resrc/docExtractor.jpg" alt="docExtractor.jpg" style="width:100%;max-width:425px;">
+      </a>
+    </div><!--
+
+    --><div class="col-xs-12 col-sm-7 vcenter" style="margin-top:1rem">
+      <b>docExtractor: An off-the-shelf historical document element extraction</b><br>
+      <u>Tom Monnier</u>,
+      <a href="https://imagine.enpc.fr/~aubrym">Mathieu Aubry</a><br>
+      <span>ICFHR 2020 (oral presentation)</span><br>
+      <a href="https://arxiv.org/abs/2012.08191">paper</a> |
+      <a href="./docExtractor/">webpage</a> |
+      <a href="https://github.com/monniert/docExtractor">code</a> |
+      <a href="https://www.youtube.com/watch?v=Tuw8uQonW7E">video</a> |
+      <a href="./docExtractor/slides_icfhr2020.pptx">slides</a> |
+      <a href="./docExtractor/ref.bib">bibtex</a>
+      <p></p>
+      <p>
+        Leveraging synthetic training data to efficiently extract visual elements from
+        historical document images.
+      </p>
+    </div>
+  </div>
+
+  <!--
+  <div class="row" style="text-align:left; margin-bottom:0.5rem; margin-top:0.5rem;">
+    <div class="hidden-xs col-xs-5 vcenter" style="text-align:center;">
+      <a href="https://hal.inria.fr/hal-02513038/document" target="_blank">
+        <img src="./resrc/watermark.jpg" alt="watermark.jpg" style="width:100%;max-width:250px">
+      </a>
+    </div>
+
+    <div class="col-xs-12 col-sm-7 vcenter" style="margin-top:1rem">
+      <b>A web application for watermark recognition</b><br>
+      <a href="https://fr.linkedin.com/in/oumayma-bounou-23bb28113">O. Bounou</a>,
+      <u>T. Monnier</u>,
+      <a href="https://www.chartes.psl.eu/en/ilaria-pastrolin">I. Pastrolin</a>,
+      <a href="https://imagine.enpc.fr/~shenx/">X. Shen</a>,
+      <a href="http://www.chartes.psl.eu/fr/christine-benevent">C. B&eacute;n&eacute;vent</a> and others<br>
+      <span>JDMDH 2020</span><br>
+      <a href="https://hal.inria.fr/hal-02513038/document">paper</a> | <a
+         href="https://filigranes.inria.fr/#/filigrane-search">web application</a> | <a
+         href="https://arxiv.org/abs/1908.10254">related paper (Shen et al.)</a>
+       <p></p>
+       <p>New public web application dedicated to automatic watermark recognition.</p>
+    </div>
+  </div>
+  -->
+</div>
+
+<div class="container">
+  <h2>Academic activities</h2>
+  <ul style="padding-left:0rem; list-style-type:none;">
+    <li><b>Visiting student</b>, <a href="https://www.berkeley.edu/">University of California</a>, Berkeley (USA) July 2022</li>
+    <li><b>Research intern</b>, <a href="https://research.adobe.com/">Adobe Research</a>, San Francisco (USA, remote), Summer 2021</li>
+    <li><b>Teaching assistant</b>, DEEPL (Masters level) at <a href="https://www.ecoledesponts.fr/en">ENPC</a>, Fall 2020 and Spring 2021
+    <li><b>Reviewer:</b>
+      <a href="http://www.mva-org.jp/mva2021/">MVA 2021</a>,
+      <a href="http://iccv2021.thecvf.com/home">ICCV 2021</a>,
+      <a href="https://neurips.cc/Conferences/2021">NeurIPS 2021</a>,
+      <a href="https://eccv2022.ecva.net/">ECCV 2022</a>,
+      <a href="https://cvpr2023.thecvf.com/">CVPR 2023</a>,
+      <a href="https://iccv2023.thecvf.com/">ICCV 2023</a>,
+      <a href="https://neurips.cc/Conferences/2023">NeurIPS 2023</a>
+    </li>
+    <li><b>Open source projects:</b></li>
+    <a class="github-button"
+       href="https://github.com/monniert/differentiable-blocksworld"
+       data-size="large"
+       data-show-count="true"
+       data-count-aria-label="# stargazers on GitHub"
+       aria-label="Star monniert/differentiable-blocksworld on GitHub">differentiable-blocksworld</a>
+    <a class="github-button"
+       href="https://github.com/monniert/docExtractor"
+       data-size="large"
+       data-show-count="true"
+       data-count-aria-label="# stargazers on GitHub"
+       aria-label="Star monniert/docExtractor on GitHub">docExtractor</a>
+    <a class="github-button"
+       href="https://github.com/monniert/dti-clustering"
+       data-size="large"
+       data-show-count="true"
+       data-count-aria-label="# stargazers on GitHub"
+       aria-label="Star monniert/dti-clustering on GitHub">dti-clustering</a>
+    <a class="github-button"
+       href="https://github.com/monniert/dti-sprites"
+       data-size="large"
+       data-show-count="true"
+       data-count-aria-label="# stargazers on GitHub"
+       aria-label="Star monniert/dti-sprites on GitHub">dti-sprites</a>
+    <a class="github-button"
+       href="https://github.com/monniert/project-webpage"
+       data-size="large"
+       data-show-count="true"
+       data-count-aria-label="# stargazers on GitHub"
+       aria-label="Star monniert/project-webpage on GitHub">project-webpage</a>
+    <a class="github-button"
+       href="https://github.com/monniert/unicorn"
+       data-size="large"
+       data-show-count="true"
+       data-count-aria-label="# stargazers on GitHub"
+       aria-label="Star monniert/unicorn on GitHub">unicorn</a> 
+  </ul>
+
+  <h2>Invited talks</h2>
+  <ul style="padding-left:0rem; list-style-type:none;">
+    <li><b class="item">06 / 2023</b>&emsp; <b>Job talk</b>, <a href="https://ai.facebook.com">Meta</a> (virtual), about the PhD thesis
+    </li>
+    <li><b class="item">06 / 2023</b>&emsp; <b>Job talk</b>, <a href="https://research.google/teams/perception/">Google Research</a> (virtual), about the PhD thesis
+    </li>
+    <li><b class="item">07 / 2022</b>&emsp; <b>Seminar</b>, <a href="https://bair.berkeley.edu/">BAIR - University of California</a> (Berkeley, USA), about the PhD thesis
+    </li>
+    <li><b class="item">04 / 2022</b>&emsp; <b>Seminar</b>, <a href="https://imagine-lab.enpc.fr/">Imagine</a> (La Turballe, France), about <em>"Share With Thy Neighbors: Single-View Reconstruction by Cross-Instance Consistency"</em>
+    </li>
+    <li><b class="item">03 / 2021</b>&emsp; <b>Seminar</b>, <a href="https://dhai-seminar.github.io/">DHAI - Ecole Normale Sup&eacute;rieure</a> (virtual), about <em>"docExtractor: An off-the-shelf historical document element extraction"</em>
+    </li>
+    <li><b class="item">02 / 2021</b>&emsp; <b>Seminar</b>, <a href="http://ligm.u-pem.fr/accueil/">LIGM - ESIEE</a> (Paris, France), about <em>"Deep Transformation-Invariant Clustering"</em>
+    </li>
+    <li><b class="item">12 / 2020</b>&emsp; <b>Workshop</b>, <a href="http://parismlgroup.org/">Paris Machine Learning Group</a> (virtual), about <em>"Deep Transformation-Invariant Clustering"</em>
+    </li>
+    <li><b class="item">12 / 2020</b>&emsp; <b>Conference oral</b>, <a href="https://nips.cc/Conferences/2020">NeurIPS 2020</a> (virtual), about <em>"Deep Transformation-Invariant Clustering"</em>
+    </li>
+    <li><b class="item">11 / 2020</b>&emsp; <b>Workshop</b>, <a href="https://www.meshs.fr/page/dhnord2020">DHNord 2020</a> (virtual), about <em>"docExtractor: An off-the-shelf historical document element extraction"</em>
+    </li>
+    <li><b class="item">09 / 2020</b>&emsp; <b>Conference oral</b>, <a href="http://icfhr2020.tu-dortmund.de/">ICFHR 2020</a> (virtual), about <em>"docExtractor: An off-the-shelf historical document element extraction"</em>
+    </li>
+  </ul>
+
+</div>
+
+<div class="container" style="padding-top:3rem; padding-bottom:3rem">
+  <small>
+    <p style="text-align:center">
+      &#169; You are welcome to copy the code, please attribute the source with a link
+      back to this page.<br> 
+      Template inspired from
+      <a href="https://imagine.enpc.fr/~groueixt" target="_blank">[1]</a>,
+      <a href="https://www.cs.cmu.edu/~junyanz/" target="_blank">[2]</a>,
+      <a href="https://jonbarron.info/" target="_blank">[3]</a>.
+      Misspellings: monier, monnie, monie, monniert.
+    </p>
+    <p style="text-align:left">Last updated: October 2023</p>
+  </small>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UNICORN</title>
+  <meta name="description" content="Project page for Share With Thy Neighbors: Single-View Reconstruction by Cross-Instance Consistency."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <meta charset="utf-8">
+  <link rel="icon" href="./icon_unicorn.png" type="image/png">
+
+  <!--Facebook-->
+  <meta property="og:image" content="https://www.tmonnier.com/UNICORN/thumbnail_short_low.gif">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="400">
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.tmonnier.com/UNICORN/"/>
+  <meta property="og:title" content="UNICORN"/>
+  <meta property="og:description" content="Project page for Share With Thy Neighbors: Single-View Reconstruction by Cross-Instance Consistency."/>
+
+  <!--Twitter-->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="UNICORN" />
+  <meta property="twitter:description" content="Project page for Share With Thy Neighbors: Single-View Reconstruction by Cross-Instance Consistency."/>
+  <meta name="twitter:image" content="https://www.tmonnier.com/UNICORN/thumbnail_short_low.gif">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,700" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Google Analytics (DO NOT copy following section-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQGR4X733Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RQGR4X733Q');
+  </script>
+  <!-- End Google Analytics -->  
+</head>
+<body>
+
+<div class="container" style="text-align:center; padding-top:2rem 15px">
+  <div class="row" style="text-align:center">
+    <h2>Share With Thy Neighbors: Single-View Reconstruction <nobr>by Cross-Instance Consistency</nobr></h2>
+    <h3>ECCV 2022</h3>
+  </div>
+  <div class="row" style="text-align:center">
+    <div class="col-xs-0 col-md-2"></div>
+    <div class="col-xs-12 col-md-8">
+      <h4>
+        <nobr><a href="https://www.tmonnier.com">Tom Monnier</a><sup>1</sup></nobr>&emsp;
+        <nobr><a href="https://techmatt.github.io/">Matthew Fisher</a><sup>2</sup></nobr> &emsp;
+        <nobr><a href="https://people.eecs.berkeley.edu/~efros/">Alexei A. Efros</a><sup>3</sup></nobr>&emsp;
+        <nobr><a href="http://imagine.enpc.fr/~aubrym/">Mathieu Aubry</a><sup>1</sup></nobr>
+      </h4>
+      <sup>1</sup><nobr>LIGM, Ecole des Ponts</nobr>, <nobr>Univ Gustave Eiffel</nobr>, CNRS<br>
+      <nobr><sup>2</sup>Adobe Research</nobr>&emsp; <nobr><sup>3</sup>UC Berkeley</nobr>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-1" style="text-align:left; margin-left:0px; margin-right:0px">
+      <a href="https://arxiv.org/pdf/2204.10310.pdf" style="color:inherit">
+        <i class="fa fa-file-pdf-o fa-4x"></i></a> 
+    </div>
+    <div class="hidden-xs hidden-sm col-md-1" style="text-align:left; margin-left:0px;">
+      <a href="https://github.com/monniert/unicorn" style="color:inherit">
+        <i class="fa fa-github fa-4x"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="text-align:center; padding:0rem">
+  <div class="row">
+    <div class="col-xs-12">
+    <h3 style="text-align:center; padding-bottom:1rem">
+      <a class="label label-info" href="https://arxiv.org/abs/2204.10310"><i class="fa fa-file-text"></i>&nbsp;&nbsp;Paper</a>
+      <a class="label label-info" href="https://github.com/monniert/unicorn"><i class="fa fa-code fa-lg" style="vertical-align: top; margin-top: 6px"></i>&nbsp;&nbsp;Code</a>
+      <a class="label label-info" href="./demo/index.html"><i class="fa fa-gamepad fa-lg" style="vertical-align:top; margin-top:5px"></i>&nbsp;&nbsp;Demo</a>
+      <a class="label label-info" href="./unicorn.pptx"><i class="fa fa-area-chart fa-lg" style="vertical-align:top;margin-top:6px"></i>&nbsp;&nbsp;Slides</a>
+      <a class="label label-info" href="./ref.bib"><i class="fa fa-commenting fa-lg" style="vertical-align:top;margin-top:6px"></i>&nbsp;&nbsp;BibTeX</a>
+    </h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+    <video autoplay loop muted playsinline src="teaser.mp4" style="width:95%; max-width: 900px"></video>
+    <!--<img src="teaser.gif" alt="teaser.gif" class="text-center" style="width: 95%; max-width: 900px">-->
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+  <h3>Abstract</h3>
+  <hr/>
+  <p>
+  Approaches for single-view reconstruction typically rely on viewpoint
+  annotations, silhouettes, the absence of background, multiple views of the
+  same instance, a template shape, or symmetry. We avoid all such supervision
+  and assumptions by <b>explicitly leveraging the consistency between images of
+    different object instances</b>. As a result, our method can learn from large
+  collections of unlabelled images depicting the same object category. Our main
+  contributions are two ways for leveraging cross-instance consistency: (i)
+  <b>progressive conditioning</b>, a training strategy to gradually specialize the
+  model from category to instances in a curriculum learning fashion; and (ii)
+  <b>neighbor reconstruction</b>, a loss enforcing consistency between instances
+  having similar shape or texture. Also critical to the success of our method
+  are: our <b>structured autoencoding architecture</b> decomposing an image into
+  explicit shape, texture, pose, and background; an adapted formulation of
+  differential rendering; and a new optimization scheme alternating between 3D
+  and pose learning. We compare our approach, <b>UNICORN</b>, both on the diverse
+  synthetic ShapeNet dataset - the classical benchmark for methods requiring
+  multiple views as supervision - and on standard real-image benchmarks
+  (Pascal3D+ Car, CUB) for which most methods require known templates and
+  silhouette annotations. We also showcase applicability to more challenging
+  real-world collections (CompCars, LSUN), where silhouettes are not available
+  and images are not cropped around the object.
+  </p>
+  
+  <div class="row" style="text-align:center">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10 text-center">
+    <h4 width=100% class="highlight" style="padding:0.5em"><b>Overview video (4min)</b></h4>
+    <div class="embed-responsive embed-responsive-16by9" style="text-align:center">
+      <iframe class="embed-responsive-item text-center" src="https://www.youtube.com/embed/26N3CeVvZDs" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        style="width:100%; clip-path:inset(1px 1px);" allowfullscreen></iframe>
+    </div>
+    <div class="hidden-xs col-md-1"></div>
+    </div>
+  </div>
+
+  <h3>UNICORN &#129412; - <b style="color:#000">UN</b>supervised <b style="color:#000">I</b>nstance
+    <b style="color:#000">CO</b>nsistency for 3D
+    <b style="color:#000">R</b>econstructio<b style="color:#000">N</b></h3>
+  <hr/>
+  <!--
+  <div class="row" style="text-align: center">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10">
+      <h4 width=100% class="highlight" style="padding:0.5em"><b>1. Overview</b></h4>
+      <img src="teaser.jpg" alt="teaser.jpg" class="text-center" style="width: 100%; max-width: 1000px">
+      <p></p>
+      <p>
+      Given a raw categorical collection of images, we learn an autoencoder that explicitly generates shape, texture, 
+      pose and background. At inference time,
+      our approach reconstructs high-quality textured meshes from single-view images.
+      </p>
+    </div>
+    <div class="hidden-xs col-md-1"></div>
+  </div>
+  -->
+  <div class="row" style="text-align:center">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10">
+      <h4 width=100% class="highlight" style="padding:0.5em"><b>1. Structured autoencoding</b></h4>
+      <img src="overview.jpg" alt="overview.jpg" class="text-center" style="width: 100%; max-width: 1000px">
+      <p></p>
+      <p>
+      <b>Overview.</b> Given an <span style="color:#0066cc">input image</span>, we 
+      predict parameters that are decoded into 4 explicit factors (shape, texture, pose, background) 
+      and composed to generate the <span style="color:#00af00">output image</span>. Progressive conditioning is 
+      represented with <img src='./pc_icon.png' style="width:1em"/>.
+      </p>
+    </div>
+    <div class="hidden-xs col-md-1"></div>
+  </div>
+  <div class="row" style="text-align:center">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10">
+      <h4 width=100% class="highlight" style="padding:0.5em"><b>2. Cross-instance consistency</b></h4>
+      <img src="cross_instance.jpg" alt="cross_instance.jpg" style="width: 100%; max-width: 1000px">
+      <p></p>
+      <p>
+      We leverage <b>cross-instance consistency</b> to avoid degenerate solutions.
+      <b>(a)</b> <b>Progressive conditioning</b> amounts to gradually increasing
+      the size of the conditioning latent spaces, here
+      associated to shape and texture. <b>(b)</b> We explicitly share the shapes
+      and textures across neighboring instances by swapping characteristics and applying a loss to associated 
+      <b>neighbor reconstructions</b>.
+      </p>
+    </div>
+    <div class="hidden-xs col-md-1"></div>
+  </div>
+
+  <h3>Results - 3D reconstruction from a single image</h3>
+  <hr/>
+  <div class="row" style="text-align: center; padding-bottom:1rem;">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10 text-center">
+    <h4 width=100% class="highlight" style="padding:0.5em">
+      <b>ShapeNet renderings&nbsp;&nbsp;<a href="sn_6x4.mp4" download><i class="fa fa-download fa-lg"></i></a></b>
+    </h4>
+      <video autoplay loop muted controls playsinline src="sn_6x4.mp4" style="width:100%;"></video>
+    <div class="hidden-xs col-md-1"></div>
+    </div>
+  </div>
+
+  <div class="row" style="text-align: center; padding-bottom:1rem;">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10 text-center">
+    <h4 width=100% class="highlight" style="padding:0.5em">
+      <b>CompCars&nbsp;&nbsp;<a href="car_6x4.mp4" download><i class="fa fa-download fa-lg"></i></a></b>
+    </h4>
+      <video autoplay loop muted controls playsinline src="car_6x4.mp4" style="width:100%;"></video>
+    <div class="hidden-xs col-md-1"></div>
+    </div>
+  </div>
+
+  <div class="row" style="text-align: center; padding-bottom:1rem;">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10 text-center">
+    <h4 width=100% class="highlight" style="padding:0.5em">
+      <b>CUB-200-2011&nbsp;&nbsp;<a href="bird_6x4.mp4" download><i class="fa fa-download fa-lg"></i></a></b>
+    </h4>
+      <video autoplay loop muted controls playsinline src="bird_6x4.mp4" style="width:100%;"></video>
+    <div class="hidden-xs col-md-1"></div>
+    </div>
+  </div>
+
+  <div class="row" style="text-align: center; padding-bottom:1rem;">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10 text-center">
+    <h4 width=100% class="highlight" style="padding:0.5em">
+      <b>LSUN Motorbike&nbsp;&nbsp;<a href="moto_6x4.mp4" download><i class="fa fa-download fa-lg"></i></a></b>
+    </h4>
+      <video autoplay loop muted controls playsinline src="moto_6x4.mp4" style="width:100%;"></video>
+    <div class="hidden-xs col-md-1"></div>
+    </div>
+  </div>
+
+  <div class="row" style="text-align: center; padding-bottom:1rem;">
+    <div class="hidden-xs col-md-1"></div>
+    <div class="col-xs-12 col-md-10 text-center">
+    <h4 width=100% class="highlight" style="padding:0.5em">
+      <b>LSUN Horse&nbsp;&nbsp;<a href="horse_6x4.mp4" download><i class="fa fa-download fa-lg"></i></a></b></h4>
+      <video class="video-fluid text-center" autoplay loop muted controls playsinline src="horse_6x4.mp4" style="width:100%;"></video>
+    <div class="hidden-xs col-md-1"></div>
+    </div>
+  </div>
+
+  <h3>Results - Segmentation and correspondences</h3>
+  <hr/>
+  <div class="row" style="text-align: center; padding-bottom:1rem;">
+    <div class="col-xs-4 text-center">
+      <h4 width=100% class="highlight" style="padding:0.5em"><b>CompCars</b></h4>
+      <img src="seg_car.jpg" alt="seg_car.jpg" class="text-center" style="width: 100%;">
+    </div>
+    <div class="col-xs-4 text-center">
+      <h4 width=100% class="highlight" style="padding:0.5em"><b>CUB</b></h4>
+      <img src="seg_bird.jpg" alt="seg_bird.jpg" class="text-center" style="width: 100%;">
+    </div>
+    <div class="col-xs-4 text-center">
+      <h4 width=100% class="highlight" style="padding:0.5em"><b>LSUN Moto</b></h4>
+      <img src="seg_moto.jpg" alt="seg_moto.jpg" class="text-center" style="width: 100%;">
+    </div>
+  </div>
+
+  <h3>Resources</h3>
+  <hr/>
+  <div class="row" style="text-align: center">
+    <div class="col-xs-4 col-lg-4">
+      <h4>Paper</h4>
+      <a href="https://arxiv.org/abs/2204.10310" style="color:inherit">
+        <img src="./paper.png" alt="paper.png" class="text-center" style="max-width:70%; border:0.15em solid;
+        border-radius:0.5em;"></a>
+    </div>
+    <div class="col-xs-4 col-lg-4">
+      <h4>Code</h4>
+      <a href="https://github.com/monniert/unicorn" style="color:inherit;">
+        <img src="./github_repo.png" alt="github_repo.png" class="text-center" style="max-width:70%; border:0.15em solid;
+        border-radius:0.5em;"></a>
+    </div>
+    <div class="col-xs-4 col-lg-4">
+      <h4>Slides</h4>
+      <a href="unicorn.pptx" style="color:inherit">
+        <img src="./slides.png" alt="slides.png" class="text-center"
+        style="width:70%; max-width: 250px; border:0.15em solid; border-radius:0.5em"></a>
+    </div>
+  </div>
+  <h4 style="padding-top:0.5em">BibTeX</h4>
+  If you find this work useful for your research, please cite:
+  <div class="card">
+    <div class="card-block">
+      <pre class="card-text clickselect">
+@inproceedings{monnier2022unicorn,
+  title={{Share With Thy Neighbors: Single-View Reconstruction by Cross-Instance Consistency}},
+  author={Monnier, Tom and Fisher, Matthew and Efros, Alexei A. and Aubry, Mathieu},
+  booktitle={{ECCV}},
+  year={2022},
+}</pre>
+    </div>
+  </div>
+
+  <h3>Further information</h3>
+  <hr/>
+  If you like this project, check out related works from our group:
+  <ul>
+    <li>
+      <a href="https://arxiv.org/abs/2109.01605">Loiseau et al. - Representing Shape Collections with Alignment-Aware
+        Linear Models (3DV 2021)</a>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2104.14575">Monnier et al. - Unsupervised Layered Image Decomposition into
+        Object Prototypes (ICCV 2021)</a>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2006.11132">Monnier et al. - Deep Transformation-Invariant Clustering (NeurIPS 
+        2020)</a>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/1908.04725">Deprelle et al. - Learning elementary structures for 3D shape
+        generation and matching (NeurIPS 2019)</a>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/1802.05384">Groueix et al. - AtlasNet: A Papier-Mache Approach to Learning 3D
+        Surface Generation (CVPR 2018)</a>
+    </li>
+  </ul>
+
+  <h3>Acknowledgements</h3>
+  <hr/>
+  <p>
+  We thank Fran&#231;ois Darmon for inspiring discussions; Robin Champenois, Romain Loiseau, Elliot Vincent for feedback on the manuscript
+; Michael Niemeyer, Shubham Goel for details on the evaluation. This work was supported in 
+  part by <a href="https://enherit.enpc.fr/">ANR project EnHerit</a> ANR-17-CE23-0008, project Rapid Tabasco, gifts from 
+  Adobe and HPC resources from GENCI-IDRIS (2021-AD011011697R1). 
+  </p>
+</div>
+
+<div class="container" style="padding-top:3rem; padding-bottom:3rem">
+  <p style="text-align:center">
+    &#169; You are welcome to copy the code, please attribute the source with a link
+    back to this page and remove the analytics.<br> Possible misspellings: tom monier, tom monnie,
+    tom monie, monniert.
+  </p>
+</div>
+
+</body>
+</html> 

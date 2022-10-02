@@ -1,0 +1,258 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>docExtractor</title>
+  <meta name="description" content="Project page for docExtractor: An off-the-shelf historical document element
+  extraction.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <meta charset="utf-8">
+
+  <!--Facebook-->
+  <meta property="og:image" content="http://imagine.enpc.fr/~monniert/docExtractor/teaser_red.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1198">
+  <meta property="og:image:height" content="350">
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://imagine.enpc.fr/~monniert/docExtractor/"/>
+  <meta property="og:title" content="docExtractor" />
+  <meta property="og:description" content="Project page for docExtractor: An off-the-shelf historical document element
+  extraction."/>
+
+  <!--Twitter-->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="docExtractor" />
+  <meta name="twitter:description" content="Project page for docExtractor: An off-the-shelf historical document element
+  extraction."/>
+  <meta name="twitter:image" content="http://imagine.enpc.fr/~monniert/docExtractor/teaser_red.jpg">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Google Analytics (DO NOT copy/paste following section, setup your own analytics tag 
+    at https://analytics.google.com/analytics/web/) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQGR4X733Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RQGR4X733Q');
+  </script>
+  <!-- End Google Analytics -->
+</head>
+<body>
+
+<div class="container" style="text-align:center; padding:2rem 15px">
+  <div class="row" style="text-align:center">
+    <h1>docExtractor: An off-the-shelf<br/>historical document element extraction</h1>
+    <h4>ICFHR 2020 (oral presentation)</h4>
+  </div>
+  <div class="row" style="text-align:center">
+    <div class="col-xs-0 col-md-3 col-lg-3"></div>
+    <div class="col-xs-12 col-md-6 col-lg-6">
+      <h4>
+        <a href="http://imagine.enpc.fr/~monniert/"><nobr>Tom Monnier</nobr></a> &emsp;
+        <a href="http://imagine.enpc.fr/~aubrym/"><nobr>Mathieu Aubry</nobr></a>
+      </h4>
+      LIGM, <nobr>&Eacute;cole des Ponts</nobr>, <nobr>Univ Gustave Eiffel</nobr>, CNRS,
+      <nobr>Marne-la-Vall&eacute;e, France</nobr>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-1" style="text-align:left; margin-left:0px; margin-right:0px">
+      <a href="https://arxiv.org/abs/2012.08191" style="color:inherit">
+        <i class="fa fa-file-pdf-o fa-4x"></i></a> 
+    </div>
+    <div class="hidden-xs hidden-sm col-md-1" style="text-align:left; margin-left:0px;">
+      <a href="https://github.com/monniert/docExtractor" style="color:inherit">
+        <i class="fa fa-github fa-4x"></i></a>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="text-align:center; padding:1rem">
+  <img src="teaser.jpg" alt="teaser.jpg" class="text-center" style="width: 100%; max-width: 1000px">
+  <h3 style="text-align:center; padding-top:1rem">
+    <a class="label label-info" href="https://arxiv.org/abs/2012.08191">Paper</a>
+    <a class="label label-info" href="https://github.com/monniert/docExtractor">Code</a>
+    <a class="label label-info" href="https://www.youtube.com/embed/j20MBc1hWGQ">Video</a>
+    <a class="label label-info" href="https://enherit.paris.inria.fr/">Demo</a>
+    <a class="label label-info" href="slides_icfhr2020.pptx">Slides</a>
+    <a class="label label-info" href="ref.bib">BibTeX</a>
+  </h3>
+</div>
+
+<div class="container">
+  <h3>Abstract</h3>
+  <hr/>
+  <p>
+  We present docExtractor, a generic approach for extracting visual elements such as text lines or 
+    illustrations from historical documents without requiring any real data annotation. We 
+    demonstrate it provides <b>high-quality performances as an off-the-shelf system</b> across a wide 
+    variety of datasets and leads to results on par with <b>state-of-the-art when fine-tuned</b>. We 
+    argue that the performance obtained without fine-tuning on a specific dataset is critical for 
+    applications, in particular in digital humanities, and that the <b>line-level page segmentation</b>
+    we address is the most relevant for a <b>general purpose element extraction engine</b>. We rely on a 
+    fast generator of a <b>rich synthetic document dataset</b> called SynDoc and design a fully convolutional network,
+    which we show to generalize better than a detection-based approach.  Furthermore, we introduce a <b>new 
+    public dataset</b> dubbed IlluHisDoc dedicated to the fine evaluation of illustration segmentation in historical
+    documents.
+  </p>
+
+  <h4 style="padding-top:1rem"><u>Online demo</u></h4>
+  <p>Check out our <b>web application</b> at <a href="https://enherit.paris.inria.fr/">https://enherit.paris.inria.fr/</a> 
+  for a live demo! We recommend using Google Chrome for a better user experience. The application was
+  developed in collaboration with Pierre-Guillaume Raverdy from Inria and was supported in part by ENPC and Ecole 
+  Nationale des Chartes.
+  </p>
+
+  <h3>Video</h3>
+  <hr/>
+  <div class="row" style="text-align:center">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10 text-center">
+    <div class="embed-responsive embed-responsive-16by9" style="text-align:center">
+      <iframe class="embed-responsive-item text-center" src="https://www.youtube.com/embed/Tuw8uQonW7E" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        style="width:100%; clip-path:inset(1px 1px);" allowfullscreen></iframe>
+    </div>
+    <div class="col-xs-1"></div>
+    </div>
+  </div>
+
+  <h3>Method</h3>
+  <hr/>
+  <div class="row" style="text-align: center">
+    <div class="col-xs-6">
+      <h4>SynDoc</h4>
+    </div>
+    <div class="col-xs-6">
+      <h4>Segmentation network</h4>
+    </div>
+  </div>
+  <div class="row" style="text-align: center">
+    <div class="col-xs-6">
+      <img src="syndoc.jpg" alt="syndoc.png" class="text-center" style="width: 90%; max-width: 900px">
+    </div>
+    <div class="col-xs-6">
+      <img src="architecture.png" alt="syndoc.png" class="text-center" style="width: 100%; max-width: 900px;
+          margin-top: 15px">
+    </div>
+  </div>
+  <div class="row" style="text-align: center">
+    <div class="col-xs-6">
+      <div style="width: 90%; max-width: 900px; margin: auto; padding-top:10px">
+        A new 10k synthetic document dataset with fine-grained annotations (bounding shapes for illustrations,
+        x-height+border for text lines) for line-level page segmentation.
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div style="width: 100%; max-width: 900px; margin: auto; padding-top:10px">
+        A U-Net architecture with a simple ResNet-18 without max-pooling as encoder and deconvolutional
+        layers for upsampling. Small components are filtered out from segmentation output.
+      </div>
+    </div>
+  </div>
+
+  <h3>Results</h3>
+  <hr/>
+  <div class="row" style="text-align: center">
+    <div class="col-xs-7">
+      <h4>cBAD2017 - Simple and Complex</h4>
+      <img src="cbad2017.jpg" alt="cbad2017.jpg" class="text-center" style="width: 100%; max-width: 900px">
+    </div>
+    <div class="col-xs-5">
+      <h4>cBAD2019</h4>
+      <img src="cbad2019.jpg" alt="cbad2019.jpg" class="text-center" style="width: 100%; max-width: 900px">
+    </div>
+  </div>
+  <div class="row" style="text-align: center; padding:1rem">
+      <h4>IlluHisDoc (new)</h4>
+      <img src="illuhisdoc.jpg" alt="illuhidoc.jpg" class="text-center" style="width: 100%; max-width: 900px">
+    </div>
+  <div class="row" style="text-align: center">
+    <div class="col-xs-6">
+      <h4>Mandragore</h4>
+      <img src="mandragore.jpg" alt="mandragore.jpg" class="text-center" style="width: 100%; max-width: 900px">
+    </div>
+    <div class="col-xs-6">
+      <h4>RASM2019</h4>
+      <img src="rasm2019.jpg" alt="rasm2019.jpg" class="text-center" style="width: 100%; max-width: 900px">
+    </div>
+  </div>
+
+  <h3>Resources</h3>
+  <hr/>
+  <div class="row" style="text-align: center; padding-bottom:1rem">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-2">
+      <h4>Paper</h4>
+      <a href="https://arxiv.org/abs/2012.08191" style="color:inherit"><img src="paper.jpg" alt="paper.jpg" class="text-center"
+        style="width:80%; max-width: 250px; border:0.15em solid; border-radius:0.5em"></a>
+    </div>
+    <div class="col-xs-2">
+      <h4>Code</h4>
+      <a href="https://github.com/monniert/docExtractor" style="color:inherit">
+        <img src="github.png" alt="github.png" class="text-center"
+        style="width:80%; max-width: 250px; border:0.15em solid; border-radius:0.5em"></a>
+    </div>
+    <div class="col-xs-2">
+      <h4>Demo</h4>
+      <a href="https://enherit.paris.inria.fr" style="color:inherit">
+        <img src="webapp.png" alt="webapp.png" class="text-center"
+        style="width:80%; max-width: 250px; border:0.15em solid; border-radius:0.5em"></a>
+    </div>
+    <div class="col-xs-2">
+      <h4>Slides</h4>
+      <a href="slides_icfhr2020.pptx" style="color:inherit">
+        <img src="slides.png" alt="slides.png" class="text-center"
+        style="width:80%; max-width: 250px; border:0.15em solid; border-radius:0.5em"></a>
+    </div>
+    <div class="col-xs-2">
+      <h4>IlluHisDoc</h2>
+      <a href="https://www.dropbox.com/s/bbpb9lzanjtj9f9/illuhisdoc.zip?dl=0" style="color:inherit">
+        <img src="illuhisdoc_raw.jpg" alt="illuhisdoc_raw.jpg" class="text-center"
+        style="width:80%; max-width: 250px; border:0.15em solid; border-radius:0.5em"></a>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+
+  <h4 style="padding-top:0.5em">BibTeX</h4>
+  If you find this work useful for your research, please cite:
+  <div class="card">
+    <div class="card-block">
+      <pre class="card-text clickselect">
+@inproceedings{monnier2020docExtractor,
+  title={{docExtractor: An off-the-shelf historical document element extraction}},
+  author={Monnier, Tom and Aubry, Mathieu},
+  booktitle={ICFHR},
+  year={2020},
+}</pre>
+    </div>
+  </div>
+
+  <h3>Acknowledgments</h3>
+  <hr/>
+  <p>
+  This work was supported in part by <a href="https://enherit.enpc.fr/">ANR project EnHerit</a>
+  ANR-17-CE23-0008, project Rapid
+  Tabasco and gifts from Adobe. We thank Beatrice Joyeux-Prunel, K. Bender, Joanna Fronska, 
+  Matthieu Husson, Stavros Lazaris, Galla Topalian, Claudia Rabel, Jean-Philippe Moreux and 
+  Alexandre Turc for their help in the data collection and fruitful discussions. We also thank 
+  Fran&#231;ois Darmon, Pierre-Guillaume Raverdy, Tristan Dot and Ryad Kaoua for code testing and 
+  feedbacks.
+  </p>
+</div>
+
+<div class="container" style="padding-top: 3rem; padding-bottom:3rem">
+  <p style="text-align:center">
+    &#169; You are welcome to copy this website's code for your personal use, please attribute the source with a link
+    back to this page and remove the analytics code in the header. Possible misspellings: tom monier, tom monnie,
+    tom monie, monniert.
+  </p>
+</div>
+
+</body>
+</html> 
